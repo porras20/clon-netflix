@@ -1,18 +1,23 @@
 import './App.css'
-import React from 'react';
-import useTmdbApi from './hooks/useTmdbApi';
+import Home from './components/Home/Home';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Nav from './components/Nav/Nav';
+import MiLista from './components/Mi-lista/Index'
+import Peliculas from './components/Peliculas/Index'
+import Series from './components/Series/Index'
 
 const App = () => {
-  const [data, isLoading, error] = useTmdbApi('https://api.themoviedb.org/3/movie/popular');
   return (
-    <div>
-      {data?.results.map((movie) => (
-        <div key={movie.id}>
-          <h2>{movie.title}</h2>
-          <p>{movie.overview}</p>
-        </div>
-      ))}
-    </div>
+    <BrowserRouter>
+      <Nav/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/home' element={<Home/>}/>
+        <Route path='/peliculas' element={<Peliculas/>}/>
+        <Route path='/series' element={<Series/>}/>
+        <Route path='/mi-lista' element={<MiLista/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 };
 

@@ -1,0 +1,77 @@
+.home_container, .encabezado{
+    height: 100vh;
+}
+.poster{
+    height: 100%;
+    background-image: url('../../../public/initialposter.avif');
+    background-size: cover;
+}
+.info{
+    margin-top: -300px;
+    max-width: 450px;
+    margin-left: 50px;
+    font-weight: bold;
+    color: var(--text-color)
+}
+
+.info h2{
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.info p{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.info button{
+    margin-right: 1rem;
+    padding: 1rem 3rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.info .more-info{
+    background-color: var(--text-color);
+}
+
+.info .trailer{
+    background-color: #606060ca;
+    color: var(--text-color);
+}
+
+.container_populares h2{
+    font-size: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.card{
+    width: 300px;
+}
+
+.card img{
+    width: 100%;
+}
+
+.info-movie{
+    text-align: center;
+    padding: 0 1rem 1rem 1rem;
+}
+
+.info-movie h2 {
+    font-size: 1rem;
+}
+
+.info-movie p{
+    font-size: 0.7rem;
+}
